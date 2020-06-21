@@ -33,19 +33,16 @@ public class UpdateReadMe {
 
     private static void addClasses(Set<Class<?>> classSet, String packageName) throws URISyntaxException, IOException {
         String packagePath = packageName.replace(PACKAGE_SEPARATOR, PACKAGE_PATH_SEPARATOR);
-        System.out.println(packagePath);
         Enumeration<URL> urls = UpdateReadMe.class.getClassLoader().getResources(packagePath);
         while (urls.hasMoreElements()) {
             URL url = urls.nextElement();
             String protocol = url.getProtocol();
-            System.out.println(url.toURI().getPath());
             if ("file".equalsIgnoreCase(protocol)) {
                 Optional.ofNullable(new File(url.toURI().getPath()))
                         .map(File::listFiles)
                         .map(Arrays::stream)
                         .orElseGet(Stream::empty)
                         .filter((file -> file.isDirectory() || (file.isFile() && file.getName().endsWith(".class"))))
-                        .peek(System.out::println)
                         .forEach(file -> {
                             if (file.isFile()) {
                                 String className = removeFileSuffix(file);
@@ -69,7 +66,6 @@ public class UpdateReadMe {
         addClasses(classSet, solutionPackageName);
         classSet.stream()
                 .filter(Utilities.withAnnotation(Problem.class))
-                .peek(cls -> System.out.println(cls.getName()))
                 .map(ProblemContext::new)
                 .sorted(Comparator.comparing(Utilities.of(ProblemContext::getProblem).andThen(Problem::id)))
                 .forEach(problemContext -> {

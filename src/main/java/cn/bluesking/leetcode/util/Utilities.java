@@ -15,6 +15,10 @@ import java.util.function.Predicate;
  */
 public final class Utilities {
 
+    private Utilities() {
+        throw new IllegalStateException("Utility class");
+    }
+
     /**
      * 判断目标（Class、Method 或其他 AnnotatedElement 的子类）是否具有某个特定的注解。
      *
