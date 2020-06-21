@@ -34,13 +34,14 @@ public class TwoSum {
         int mod = 2047;
         int[] ref = new int[mod + 1];
         for (int i = 0, length = nums.length; i < length; i++) {
-            int num = nums[i], index = ref[(target - num) & mod];
+            int num = nums[i];
+            int index = ref[(target - num) & mod];
             if (index != 0) {
                 return new int[] { index - 1, i };
             }
             ref[num & mod] = i + 1;
         }
-        return null;
+        return new int[0];
     }
 
     @Solution(executeTime = 2, executionTimeBeatRate = 99.59,
@@ -49,13 +50,14 @@ public class TwoSum {
         Map<Integer, Integer> indexRef = new HashMap<>(nums.length);
         indexRef.put(nums[0], 0);
         for (int i = 1, length = nums.length; i < length; i ++) {
-            Integer num = nums[i], index = indexRef.get(target - nums[i]);
+            Integer num = nums[i];
+            Integer index = indexRef.get(target - nums[i]);
             if (index != null) {
                 return new int[] { index, i };
             }
             indexRef.put(num, i);
         }
-        return null;
+        return new int[0];
     }
 
 }
