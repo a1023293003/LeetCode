@@ -6,6 +6,9 @@
 | ---- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------- | ------- | ---------- |
 | 1    | [两数之和](https://leetcode-cn.com/problems/two-sum/)        | [JAVA](https://github.com/a1023293003/LeetCode/tree/master/src/main/java/cn/bluesking/leetcode/solution/TwoSum.java) | 100.00  | 5.06    | 2020-06-21 |
 | 2    | [两数相加](https://leetcode-cn.com/problems/add-two-numbers/) | [JAVA](https://github.com/a1023293003/LeetCode/tree/master/src/main/java/cn/bluesking/leetcode/solution/AddTwoNumbers.java) | 99.89   | 94.26   | 2020-06-21 |
+| 3    | [无重复字符的最长子串](https://leetcode-cn.com/problems/longest-substring-without-repeating-characters/) | [JAVA](https://github.com/a1023293003/LeetCode/tree/master/src/main/java/cn/bluesking/leetcode/solution/LongestSubstringWithoutRepeatingCharacters.java) | 100.00  | 5.54    | 2020-06-21 |
 |      |                                                              |                                                              |         |         |            |
+
+
 
 
