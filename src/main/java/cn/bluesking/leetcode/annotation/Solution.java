@@ -1,6 +1,8 @@
 package cn.bluesking.leetcode.annotation;
 
+import cn.bluesking.leetcode.annotation.check.NotNull;
 import cn.bluesking.leetcode.annotation.check.Required;
+import lombok.NonNull;
 
 import java.lang.annotation.ElementType;
 import java.lang.annotation.Retention;
@@ -40,5 +42,12 @@ public @interface Solution {
      */
     @Required
     double memoryConsumptionBeatRate();
+
+    /**
+     * @return [String] 代码提交时间
+     */
+    @NotNull
+    @Required
+    String submitDate();
 
 }

@@ -27,7 +27,8 @@ import java.util.Map;
 @Problem(id = 1, title = "两数之和", url = "https://leetcode-cn.com/problems/two-sum/")
 public class TwoSum {
 
-    @Solution(executeTime = 0, executionTimeBeatRate = 100.0,
+    @Solution(submitDate = "2020-06-21",
+            executeTime = 0, executionTimeBeatRate = 100.0,
             memoryConsumption = 39.3, memoryConsumptionBeatRate = 5.06)
     public int[] twoSumByArrayRef(int[] nums, int target) {
         // 必须是 2^n - 1
@@ -44,7 +45,8 @@ public class TwoSum {
         return new int[0];
     }
 
-    @Solution(executeTime = 2, executionTimeBeatRate = 99.59,
+    @Solution(submitDate = "2020-06-21",
+            executeTime = 2, executionTimeBeatRate = 99.59,
             memoryConsumption = 39.9, memoryConsumptionBeatRate = 5.06)
     public int[] twoSumByMap(int[] nums, int target) {
         Map<Integer, Integer> indexRef = new HashMap<>(nums.length);
