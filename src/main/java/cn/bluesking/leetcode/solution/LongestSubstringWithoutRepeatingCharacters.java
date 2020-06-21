@@ -2,7 +2,6 @@ package cn.bluesking.leetcode.solution;
 
 import cn.bluesking.leetcode.annotation.Problem;
 import cn.bluesking.leetcode.annotation.Solution;
-import lombok.extern.slf4j.Slf4j;
 
 /**
  * <h2>无重复字符的最长子串</h2>
@@ -47,6 +46,8 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return left > right ? left : right;
     }
 
+    /* ==========================================================================*/
+
     @Solution(submitDate = "2020-06-21",
             executeTime = 10.0, executionTimeBeatRate = 43.18,
             memoryConsumption = 40.2, memoryConsumptionBeatRate = 5.20)
@@ -71,10 +72,12 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return max(count, maxCount);
     }
 
+    /* ==========================================================================*/
+
     @Solution(submitDate = "2020-06-21",
             executeTime = 2.0, executionTimeBeatRate = 100.0,
             memoryConsumption = 39.7, memoryConsumptionBeatRate = 5.54)
-    public int lengthOfLongestSubstring(String s) {
+    public int lengthOfLongestSubstringPretty(String s) {
         int count = 0;
         int maxCount = 0;
         int[] ref = new int[256];
